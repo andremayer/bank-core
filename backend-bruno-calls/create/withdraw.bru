@@ -1,0 +1,23 @@
+meta {
+  name: withdraw
+  type: http
+  seq: 4
+}
+
+post {
+  url: http://localhost:8080/api/withdraw
+  body: json
+  auth: none
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "accountNumber": "123",
+    "amount": 35,
+    "transactionType": "withdraw"
+  }
+}
